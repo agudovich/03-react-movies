@@ -1,5 +1,5 @@
 import { useState } from "react";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { fetchMovies } from "../../services/movieService";
 import type { Movie } from "../../types/movie";
 
@@ -35,6 +35,7 @@ export default function App() {
 
   return (
     <>
+      <Toaster position="top-right" />
       <SearchBar onSubmit={handleSearch} />
 
       {loading && <Loader />}
